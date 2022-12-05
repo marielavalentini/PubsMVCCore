@@ -1,0 +1,54 @@
+﻿@model PubsMVCCore.Models.Store
+@{
+    ViewData["Title"] = "Detalle";
+}
+
+<h1>Detalle</h1>
+<fieldset>
+    <legend>Detalles del Turno @Model.StorId</legend>
+    <table>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.StorId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.StorName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.StorAddress)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.City)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.State)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Zip)
+            </th>
+        </tr>
+        <tr>
+            <td>
+                @Html.DisplayFor(model => model.StorId)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.StorName)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.StorAddress)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.City)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.State)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.Zip)
+            </td>
+        </tr>
+    </table>
+</fieldset>
+<p>
+    @Html.ActionLink("Volver al listado", "Index", "Store")
+</p>

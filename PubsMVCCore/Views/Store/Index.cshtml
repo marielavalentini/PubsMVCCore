@@ -1,0 +1,37 @@
+﻿@model IEnumerable<PubsMVCCore.Models.Store>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Lista de Stores</h1>
+<table>
+    <tr>
+        <th>@Html.DisplayNameFor(m => m.StorId)</th>
+        <th>@Html.DisplayNameFor(m => m.StorName)</th>
+        <th>@Html.DisplayNameFor(m => m.StorAddress)</th>
+        <th>@Html.DisplayNameFor(m => m.City)</th>
+        <th>@Html.DisplayNameFor(m => m.State)</th>
+        <th>@Html.DisplayNameFor(m => m.Zip)</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@Html.DisplayFor(m => item.StorId)</td>
+            <td>@Html.DisplayFor(m => item.StorName)</td>
+            <td>@Html.DisplayFor(m => item.StorAddress)</td>
+            <td>@Html.DisplayFor(m => item.City)</td>
+            <td>@Html.DisplayFor(m => item.State)</td>
+            <td>@Html.DisplayFor(m => item.Zip)</td>
+
+            <td>@Html.ActionLink("Detalle", "Detalle", new { id = item.StorId })</td>
+            <td>@Html.ActionLink("Eliminar", "Delete", new { id = item.StorId })</td>
+
+        </tr>
+    }
+
+</table>
+<div class="agregar">
+    <p>@Html.ActionLink("Agregar nueva store", "Create", "Store")</p>
+    <p>@Html.ActionLink("Volver al inicio", "Index", "Home")</p>
+</div>
+

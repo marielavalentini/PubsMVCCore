@@ -1,0 +1,30 @@
+﻿@model PubsMVCCore.Models.Store
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h2>@Model.StorId</h2>
+<p>Desea eliminar este Store?</p>
+
+@using (Html.BeginForm("Delete", "Store", FormMethod.Post))
+{
+            <div>
+                <spam>@Html.DisplayNameFor(model => model.StorId)</spam>
+                <spam>@Html.DisplayFor(model => model.StorId)</spam>
+                <spam>@Html.DisplayNameFor(model => model.StorName)</spam>
+                <spam>@Html.DisplayFor(model => model.StorName)</spam>
+                <spam>@Html.DisplayNameFor(model => model.StorAddress)</spam>
+                <spam>@Html.DisplayFor(model => model.StorAddress)</spam>
+                <spam>@Html.DisplayNameFor(model => model.City)</spam>
+                <spam>@Html.DisplayFor(model => model.City)</spam>
+                <spam>@Html.DisplayNameFor(model => model.State)</spam>
+                <spam>@Html.DisplayFor(model => model.State)</spam>
+                <spam>@Html.DisplayNameFor(model => model.Zip)</spam>
+                <spam>@Html.DisplayFor(model => model.Zip)</spam>
+            </div>
+            <input type="submit" value="ELIMINAR " />
+}
+
+<p>
+    @Html.ActionLink("Volver al listado", "Index", "Store")
+</p>

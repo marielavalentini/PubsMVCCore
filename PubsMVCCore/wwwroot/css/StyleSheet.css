@@ -1,0 +1,97 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.headerContainer {
+    display: flex;
+}
+
+.banner {
+    width: 500px;
+    height: 250px;
+    background-color: #FFCAC8;
+    color: black;
+    text-align: center;
+}
+
+.sectionLogo {
+    background-color: #C0EEE4;
+    width: 250px;
+    text-align: center;
+}
+
+.sectionLogin {
+    background-color: #F8F988;
+    width: 250px;
+    text-align: center;
+}
+
+.sectionLogo, .sectionLogin {
+    height: 125px;
+}
+
+.designContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.mainContainer {
+    display: flex;
+    height: 400px
+}
+
+nav {
+    height: 50px;
+    background-color: #FF9E9E;
+    display: flex;
+    justify-content: end;
+    width: 750px;
+    gap: 10px;
+    padding-top: 5px;
+}
+
+main {
+    width: 500px;
+    background-color: #C0EEE4;
+}
+
+aside {
+    width: 250px;
+    background-color: #F8F988;
+}
+
+table {
+    border: 2px solid black;
+}
+
+td {
+    text-align: center;
+}
+
+.agregar {
+    text-align: left;
+}
+
+footer {
+    height: 50px;
+    width: 750px;
+    display: flex;
+    justify-content: center;
+    background-color: #FF9E9E;
+}
